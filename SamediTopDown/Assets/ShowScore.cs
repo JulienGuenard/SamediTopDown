@@ -6,40 +6,35 @@ using UnityEngine.Networking;
 
 public class ShowScore : NetworkBehaviour
 {
-  [SyncVar(hook = "UpdateScoreJ1")]
+    [SyncVar]
     public int J1Score = 0;
-  [SyncVar(hook = "UpdateScoreJ2")]
+    [SyncVar]
     public int J2Score = 0;
     public int localId;
 
     public override void OnStartClient()
     {
-       
+        Debug.Log("aa");
         if (isServer)
             localId = 0;
         else
             localId = 1;
     }
 
-    public void AddScore()
-    {
-      Debug.Log(localId.ToString());
-        if(localId == 1)
-        {
-            J1Score += 1;
-        }
-        else if (localId == 0)
-            J2Score += 1;
-
+    public void AddScore(int playerID)
+  {
+    if (playerID == 2)
+      {
+        J1Score += 1;
+      } else
+      {
+        J2Score += 1;
+      }
     }
+   
 
-    void UpdateScoreJ1 (int J1Score)
+    private void Update()
     {
-      GetComponent<Text>().text = J1Score + " : " + J2Score;
+        GetComponent<Text>().text = J1Score + " : " + J2Score;
     }
-  void UpdateScoreJ2 (int J2Score)
-    {
-      GetComponent<Text>().text = J1Score + " : " + J2Score;
-    }
-
 }

@@ -14,8 +14,11 @@ public GameObject bulletSpawn;
 
 Rigidbody rigidbody;
 
+public int playerID;
+
 void Start()
   {
+      playerID = (int)netId.Value;
     rigidbody = GetComponent<Rigidbody>();
     meshR = GetComponent<MeshRenderer>();
     if (isLocalPlayer)

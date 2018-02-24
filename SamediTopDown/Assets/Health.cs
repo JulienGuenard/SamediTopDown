@@ -33,7 +33,10 @@ public class Health : NetworkBehaviour
             currentHealth = 100;
         RpcRespawn();
             Debug.Log("Dead!");
-            UIScore.AddScore();
+
+              UIScore.AddScore(GetComponent<PlayerController>().playerID);
+
+            
         }
 
     }
