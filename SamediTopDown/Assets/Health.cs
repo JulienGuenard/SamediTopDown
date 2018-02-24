@@ -26,8 +26,10 @@ public class Health : NetworkBehaviour
         }
 
     }
+
     void OnChangeHealth(int health)
     {
+        Debug.Log("change");
         healthBar.value = currentHealth;
     }
 
