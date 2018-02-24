@@ -10,6 +10,13 @@ public class Health : NetworkBehaviour
     public int currentHealth = maxHealth;
     public Slider healthBar;
 
+  private NetworkStartPosition[] spawnPoints;
+
+  void Start ()
+  {
+  if (isLocalPlayer)
+      spawnPoints = FindObjectsOfType<NetworkStartPosition>();
+  }
 
     public void TakeDamage(int amount)
     {
@@ -22,6 +29,7 @@ public class Health : NetworkBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 100;
+        RpcRespawn();
             Debug.Log("Dead!");
         }
 
@@ -31,6 +39,16 @@ public class Health : NetworkBehaviour
     {
         Debug.Log("change");
         healthBar.value = health;
+    }
+
+    [ClientRpc]
+    void RpcRespawn ()
+    {
+      Vector3 spawnPoint = Vector3.zero;
+      if (spawnPoints != null && spawnPoints.Length > 0)
+{
+    spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
+}
     }
 
 }
