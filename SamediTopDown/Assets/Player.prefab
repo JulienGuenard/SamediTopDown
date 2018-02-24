@@ -384,7 +384,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &114097297954133166
 MonoBehaviour:
@@ -522,8 +522,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   healthBar: {fileID: 114812554694004604}
-  pointRespawn1: {fileID: 0}
-  pointRespawn2: {fileID: 0}
 --- !u!114 &114780139998786198
 MonoBehaviour:
   m_ObjectHideFlags: 1
