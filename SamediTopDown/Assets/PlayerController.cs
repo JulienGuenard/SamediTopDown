@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 
 public class PlayerController : NetworkBehaviour {
@@ -11,13 +12,18 @@ MeshRenderer meshR;
 public GameObject bulletPrefab;
 public GameObject bulletSpawn;
 
+Rigidbody rigidbody;
+
 void Start()
   {
+    rigidbody = GetComponent<Rigidbody>();
     meshR = GetComponent<MeshRenderer>();
     if (isLocalPlayer)
       {
+        GetComponent<cakeslice.Outline>().color = 3;
         meshR.material.color = Color.blue;
       }else{
+          GetComponent<cakeslice.Outline>().color = 0;
           meshR.material.color = Color.red;
       }
 }
@@ -27,6 +33,8 @@ void Start()
     if (isLocalPlayer)
       {
         transform.position += new Vector3(Input.GetAxis("Horizontal") / 3, 0, Input.GetAxis("Vertical") / 3);
+
+        rigidbody.velocity = Vector3.zero;
 
         ChangeRotation();
 
@@ -42,10 +50,10 @@ void Start()
     {
     GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
 
-    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward*4;
+    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward*15;
 
     NetworkServer.Spawn(bullet);
-      Destroy(bullet.gameObject,2.0f);
+      Destroy(bullet.gameObject,6.0f);
     }
 
     void ChangeRotation ()
