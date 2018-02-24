@@ -12,6 +12,12 @@ public class ShowScore : NetworkBehaviour
     public int J2Score = 0;
     public int localId;
 
+    void Start () {
+      GetComponent<RectTransform>().offsetMin = new Vector2(0,0);
+    GetComponent<RectTransform>().offsetMax = new Vector2(0,0);
+    }
+
+
     public override void OnStartClient()
     {
         Debug.Log("aa");
