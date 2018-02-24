@@ -137,12 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5b902d3b125594da975a4a4169929b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SyncVarDirtyBits: 0
-  m_LastSendTime: 0
-  m_SyncVarGuard: 0
-  m_MyView: {fileID: 0}
-  enemyPrefab: {fileID: 1464499413219390, guid: e8d3c1bd0e877bd4cbbf6ce68e0d8f49,
-    type: 2}
 --- !u!4 &509265522
 Transform:
   m_ObjectHideFlags: 0
@@ -263,13 +257,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921385098}
-  m_LocalRotation: {x: -0, y: 0.33343458, z: -0, w: 0.9427733}
-  m_LocalPosition: {x: -13.9, y: 0, z: 2.1}
+  m_LocalRotation: {x: 0.3899509, y: 0.5162897, z: 0.28461245, w: 0.7073747}
+  m_LocalPosition: {x: -9.6, y: 0.0000005535856, z: 8.5}
   m_LocalScale: {x: 38.82557, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 1064075247}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 38.955, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.939001, y: 80.302, z: 56.458004}
 --- !u!23 &921385100
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -345,13 +339,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 934625813}
-  m_LocalRotation: {x: -0, y: 0.33343458, z: -0, w: 0.9427733}
-  m_LocalPosition: {x: 20.5, y: 0, z: 2.1}
+  m_LocalRotation: {x: -0.039892662, y: 0.18502778, z: -0.2762754, w: 0.94225544}
+  m_LocalPosition: {x: 17.2, y: -0.0000001754121, z: 2.1}
   m_LocalScale: {x: 38.825565, y: 1, z: 4.999998}
   m_Children: []
   m_Father: {fileID: 1064075247}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 38.955, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.5510001, y: 21.769001, z: -32.385002}
 --- !u!23 &934625815
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ void Start()
     {
     GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
 
-    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward;
+    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward*4;
 
     NetworkServer.Spawn(bullet);
       Destroy(bullet.gameObject,2.0f);
