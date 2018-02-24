@@ -6,15 +6,15 @@ using UnityEngine.Networking;
 
 public class ShowScore : NetworkBehaviour
 {
-    [SyncVar]
+  [SyncVar(hook = "UpdateScoreJ1")]
     public int J1Score = 0;
-    [SyncVar]
+  [SyncVar(hook = "UpdateScoreJ2")]
     public int J2Score = 0;
     public int localId;
 
     public override void OnStartClient()
     {
-        Debug.Log("aa");
+       
         if (isServer)
             localId = 0;
         else
@@ -23,17 +23,23 @@ public class ShowScore : NetworkBehaviour
 
     public void AddScore()
     {
-        Debug.Log(localId);
+      Debug.Log(localId.ToString());
         if(localId == 1)
         {
             J1Score += 1;
         }
         else if (localId == 0)
             J2Score += 1;
+
     }
 
-    private void Update()
+    void UpdateScoreJ1 (int J1Score)
     {
-        GetComponent<Text>().text = J1Score + " : " + J2Score;
+      GetComponent<Text>().text = J1Score + " : " + J2Score;
     }
+  void UpdateScoreJ2 (int J2Score)
+    {
+      GetComponent<Text>().text = J1Score + " : " + J2Score;
+    }
+
 }
