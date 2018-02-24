@@ -5,18 +5,7 @@ using UnityEngine.Networking;
 
 public class Bullet : NetworkBehaviour {
 
-  SpriteRenderer spriteR;
-
-	void Start () {
-      spriteR = GetComponent<SpriteRenderer>();
-
-      if (isLocalPlayer)
-      {
-        spriteR.material.color = Color.blue;
-      }else{
-          spriteR.material.color = Color.red;
-      }
-	}
+  MeshRenderer meshR;
 
     void OnCollisionEnter (Collision collision)
  {

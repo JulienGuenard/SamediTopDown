@@ -22,10 +22,13 @@ void Start()
       }
 }
 
-	void Update () 
-    {
-    if (isLocalPlayer) {
-          transform.position += new Vector3(Input.GetAxis("Horizontal")/2, 0, Input.GetAxis("Vertical")/2);
+	void Update()
+  {
+    if (isLocalPlayer)
+      {
+        transform.position += new Vector3(Input.GetAxis("Horizontal") / 3, 0, Input.GetAxis("Vertical") / 3);
+
+        ChangeRotation();
 
           if (Input.GetKeyDown(KeyCode.Space)) 
           {
@@ -39,9 +42,51 @@ void Start()
     {
     GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
 
-    bullet.GetComponent<Rigidbody>().velocity = Vector3.forward;
+    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward;
 
     NetworkServer.Spawn(bullet);
       Destroy(bullet.gameObject,2.0f);
     }
+
+    void ChangeRotation ()
+    {
+      if (Input.GetAxis("Horizontal") > 0)
+          {
+          transform.localRotation = Quaternion.Euler(0, 90, 0);
+            if (Input.GetAxis("Vertical") > 0)
+              {
+              transform.localRotation = Quaternion.Euler(0, 45, 0);
+              }
+            if (Input.GetAxis("Vertical") < 0)
+              {
+              transform.localRotation = Quaternion.Euler(0, 135, 0);
+              }
+          }
+
+          if (Input.GetAxis("Horizontal") < 0)
+          {
+          transform.localRotation = Quaternion.Euler(0, 270, 0);
+            if (Input.GetAxis("Vertical") > 0)
+              {
+              transform.localRotation = Quaternion.Euler(0, 315, 0);
+              }
+            if (Input.GetAxis("Vertical") < 0)
+              {
+              transform.localRotation = Quaternion.Euler(0, 235,0 );
+              }
+          }
+
+          if (Input.GetAxis("Horizontal") == 0) 
+          {
+              if (Input.GetAxis("Vertical") < 0)
+              {
+              transform.localRotation = Quaternion.Euler(0, 180, 0);
+              }
+              if (Input.GetAxis("Vertical") > 0)
+              {
+                  transform.localRotation = Quaternion.Euler(0, 0, 0);
+              }
+          }
+    }
+
 }
