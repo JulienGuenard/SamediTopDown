@@ -6,6 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	void Update () {
-    transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+      transform.position += new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 	}
 }
