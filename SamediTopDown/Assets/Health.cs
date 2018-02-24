@@ -24,7 +24,6 @@ public class Health : NetworkBehaviour
             currentHealth = 0;
             Debug.Log("Dead!");
         }
-        healthBar.value = currentHealth;
 
     }
     void OnChangeHealth(int health)
