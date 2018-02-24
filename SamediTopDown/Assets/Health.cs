@@ -21,7 +21,7 @@ public class Health : NetworkBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
+            currentHealth = 100;
             Debug.Log("Dead!");
         }
 
