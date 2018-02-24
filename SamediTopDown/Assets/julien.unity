@@ -627,7 +627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &461453720
 MonoBehaviour:
@@ -640,49 +640,6 @@ MonoBehaviour:
   m_Script: {fileID: -1050975500, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &509265520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1095058935889092, guid: f5d12c8aa6eb0644dbb7773df0cda085,
-    type: 2}
-  m_PrefabInternal: {fileID: 2051080171}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 509265522}
-  - component: {fileID: 509265521}
-  m_Layer: 0
-  m_Name: EnemySpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &509265521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114891062151394398, guid: f5d12c8aa6eb0644dbb7773df0cda085,
-    type: 2}
-  m_PrefabInternal: {fileID: 2051080171}
-  m_GameObject: {fileID: 509265520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5b902d3b125594da975a4a4169929b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &509265522
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085,
-    type: 2}
-  m_PrefabInternal: {fileID: 2051080171}
-  m_GameObject: {fileID: 509265520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596839899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +968,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047781384
 GameObject:
@@ -1332,7 +1289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1363087404
 MonoBehaviour:
@@ -2120,45 +2077,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2051080171
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4129602740929272, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: f5d12c8aa6eb0644dbb7773df0cda085, type: 2}
-  m_IsPrefabParent: 0
