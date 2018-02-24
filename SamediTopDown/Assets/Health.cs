@@ -9,13 +9,15 @@ public class Health : NetworkBehaviour
     [SyncVar(hook = "OnChangeHealth")]
     public int currentHealth = maxHealth;
     public Slider healthBar;
+    public ShowScore UIScore;
 
-  private NetworkStartPosition[] spawnPoints;
+    private NetworkStartPosition[] spawnPoints;
 
   void Start ()
   {
   if (isLocalPlayer)
       spawnPoints = FindObjectsOfType<NetworkStartPosition>();
+        UIScore = GameObject.FindObjectOfType<ShowScore>();
   }
 
     public void TakeDamage(int amount)
@@ -31,6 +33,7 @@ public class Health : NetworkBehaviour
             currentHealth = 100;
         RpcRespawn();
             Debug.Log("Dead!");
+            UIScore.AddScore();
         }
 
     }
