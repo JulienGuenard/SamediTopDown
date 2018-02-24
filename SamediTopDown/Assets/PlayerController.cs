@@ -34,7 +34,7 @@ void Start()
        }
 	}
 
-    [Server]
+    [Command]
     void CmdShoot () 
     {
     GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
@@ -42,6 +42,6 @@ void Start()
     bullet.GetComponent<Rigidbody>().velocity = Vector3.forward;
 
     NetworkServer.Spawn(bullet);
-      Destroy(gameObject,2.0f);
+      Destroy(bullet.gameObject,2.0f);
     }
 }
