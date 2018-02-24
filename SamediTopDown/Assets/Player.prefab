@@ -57,7 +57,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4047808875971696}
   - component: {fileID: 33544139954177748}
-  - component: {fileID: 65129691292430208}
   - component: {fileID: 23826123492879234}
   m_Layer: 0
   m_Name: Flingue
@@ -75,7 +74,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4938520109929600}
   - component: {fileID: 33428626824726662}
-  - component: {fileID: 65874432886866656}
   - component: {fileID: 23978007193902480}
   m_Layer: 0
   m_Name: Face
@@ -118,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320533579791550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.886118, y: 16.496044, z: 16.124119}
+  m_LocalPosition: {x: 11.600061, y: 12.952601, z: 20.630375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4938520109929600}
@@ -271,30 +269,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &65129691292430208
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1665870742778372}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65874432886866656
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1811877449940576}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114097297954133166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
-  bulletSpawn: {x: 0, y: 0, z: 0}
+  bulletSpawn: {fileID: 0}
 --- !u!136 &136639886703229842
 CapsuleCollider:
   m_ObjectHideFlags: 1

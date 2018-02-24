@@ -6,19 +6,19 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour {
 
-SpriteRenderer spriteR;
+MeshRenderer meshR;
 
 public GameObject bulletPrefab;
-public Vector3 bulletSpawn;
+public GameObject bulletSpawn;
 
 void Start()
   {
-    spriteR = GetComponent<SpriteRenderer>();
+    meshR = GetComponent<MeshRenderer>();
     if (isLocalPlayer)
       {
-        spriteR.material.color = Color.blue;
+        meshR.material.color = Color.blue;
       }else{
-          spriteR.material.color = Color.red;
+          meshR.material.color = Color.red;
       }
 }
 
@@ -37,7 +37,7 @@ void Start()
     [Server]
     void CmdShoot () 
     {
-    GameObject bullet = Instantiate(bulletPrefab, bulletSpawn, transform.rotation);
+    GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
 
     bullet.GetComponent<Rigidbody>().velocity = Vector3.forward;
 
